@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>6.1</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
-    <ProjectGuid>{66a2a94d-cb53-47dc-b064-11c782e4bab3}</ProjectGuid>
+    <ProjectGuid>{2c212645-ff05-4459-931c-9ab2d1bd9b5a}</ProjectGuid>
     <avrdevice>ATmega8</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
@@ -12,9 +12,9 @@
     <OutputFileName>$(MSBuildProjectName)</OutputFileName>
     <OutputFileExtension>.elf</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
-    <AssemblyName>PCF8574-I2C</AssemblyName>
-    <Name>PCF8574-I2C</Name>
-    <RootNamespace>PCF8574-I2C</RootNamespace>
+    <AssemblyName>TestowanieNaPlytce</AssemblyName>
+    <Name>TestowanieNaPlytce</Name>
+    <RootNamespace>TestowanieNaPlytce</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
@@ -25,6 +25,20 @@
     <OverrideVtorValue>exception_table</OverrideVtorValue>
     <BootSegment>2</BootSegment>
     <eraseonlaunchrule>0</eraseonlaunchrule>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+          <JtagEnableExtResetOnStartSession>false</JtagEnableExtResetOnStartSession>
+        </InterfaceProperties>
+        <InterfaceName>
+        </InterfaceName>
+      </ToolOptions>
+      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -86,7 +100,7 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="PCF8574-I2C.c">
+    <Compile Include="TestowanieNaPlytce.c">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

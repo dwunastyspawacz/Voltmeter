@@ -1,5 +1,5 @@
 /*
- * PCF8574_I2C.c
+ * TestowanieNaPlytce.c
  *
  * Created: 2014-05-06 16:40:19
  *  Author: Radek
@@ -7,13 +7,16 @@
 
 
 #include <avr/io.h>
-#include <displayFunction.h>
-#include <I2C-communicationFunction.h>
-#include <twi.h>
+#include <display.h>
+#include <I2C.h>
+#include <util/twi.h>
 #include <stdlib.h>
+#include <util/delay.h>
+#include <stdio.h>
 
-#define PCF8574ADR 0x40 //The older nibble contains a built-in device's address. The younger one consists of 3 user defined bits (set to zero in this case) and R/W bit.
-#define PCF8591ADR 0x90 //<the same as above>
+#define F_CPU 8000000
+
+ //<the same as above>
 
 #define BUTTON_ONE 0b10000000 // Monostable buttons
 #define BUTTON_TWO 0b01000000 
@@ -36,13 +39,20 @@ int main(void)
 														    */			
 														
 	
-	const uint8_t segmentNumberConfig[10] = {ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE};
+	 
 	int8_t calibrationData[4] = {0};
-	uint8_t errorBuffer = 0;
+	 
+	
+	DDRD = 0xff;
+	DDRC = 0xff;
+	DDRB = 0xff;
+	
+	uint8_t i = 201;
+
 	
    while(1)
     {					
-		uint8_t loopAux_0;
+		/*uint8_t loopAux_0;
 		for(loopAux_0 = 0 ; loopAux_0 < 2 ; loopAux_0++)
 		{
 			uint8_t selector = 0;
@@ -62,32 +72,32 @@ int main(void)
 					else
 						selector = 3;
 					break;
-			}
+			}*/
+			uint8_t finalValue[4] = {0};
+			uint8_t dataPacket = 0;
 			
-			uint8_t dataPacket = I2C_PCF8591(PCF8591ADR, PCF8591_CONTROL_BYTE | bitMaskArray[selector], &errorBuffer); 
 			
+				
 			while(!(PINB & BUTTON_THREE)) //Enabling the calibration mode;
-			{
-				calibrationData[selector] = calibrationFunction(selector);
+			{	
+				PORTD |= LED_1;
+				
+				calibrationData[selector] = calibrationFunction();
+				
 			}
 			
-			char finalValue[4];
-			binaryToVoltageConverter(dataPacket, calibrationData, bitMaskArray[selector], finalValue);
-			
+			uint8_t error = I2C_PCF8591(PCF8591ADR, PCF8591_CONTROL_BYTE | bitMaskArray[0], &dataPacket); 
+			binaryToVoltageConverter(dataPacket, calibrationData, 0x00, finalValue);
 			uint8_t loopAux_1, dispIndex;
-			
-			for(loopAux_1 = 0, dispIndex = 1 ; loopAux_1 < 4 ; loopAux_1++, dispIndex*2) //lepiej przesuniêcie bitowe
+			for(loopAux_1 = 0, dispIndex = 1 ; loopAux_1 < 4 ; loopAux_1++, dispIndex = dispIndex*2) //lepiej przesuniêcie bitowe
 			{
-				if(errorBuffer == 0)
-					displayFunction(segmentNumberConfig[ finalValue[loopAux_1] ], I2C_PCF8574, PCF8574ADR, dispIndex, &errorBuffer);
-				else
-				{
-					utoa(errorBuffer, finalValue, 2);
-					displayFunction(finalValue[loopAux_1], I2C_PCF8574, PCF8574ADR, dispIndex, &errorBuffer);
-					while(1); //Displaying the error code for ever, waiting for a reset
-			    }
+					displayFunction(finalValue[loopAux_1], I2C_PCF8574, dispIndex);
+					_delay_ms(5);
 			}
+			
+			//PORTB = 0xff;
+			//PORTC = 0xff;
+			
 		}
-    }
+   
 }
-
