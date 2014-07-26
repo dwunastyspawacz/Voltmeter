@@ -1,0 +1,1644 @@
+
+TestowanieNaPlytce.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000006fc  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  000006fc  00000770  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .stab         000006cc  00000000  00000000  00000770  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000097  00000000  00000000  00000e3c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .comment      0000002f  00000000  00000000  00000ed3  2**0
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000a0  00000000  00000000  00000f02  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000008a9  00000000  00000000  00000fa2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000330  00000000  00000000  0000184b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000004ca  00000000  00000000  00001b7b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000001bc  00000000  00000000  00002048  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000002d2  00000000  00000000  00002204  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000089f  00000000  00000000  000024d6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000e8  00000000  00000000  00002d75  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	62 c0       	rjmp	.+196    	; 0xc6 <__ctors_end>
+   2:	69 c0       	rjmp	.+210    	; 0xd6 <__bad_interrupt>
+   4:	68 c0       	rjmp	.+208    	; 0xd6 <__bad_interrupt>
+   6:	67 c0       	rjmp	.+206    	; 0xd6 <__bad_interrupt>
+   8:	66 c0       	rjmp	.+204    	; 0xd6 <__bad_interrupt>
+   a:	65 c0       	rjmp	.+202    	; 0xd6 <__bad_interrupt>
+   c:	64 c0       	rjmp	.+200    	; 0xd6 <__bad_interrupt>
+   e:	63 c0       	rjmp	.+198    	; 0xd6 <__bad_interrupt>
+  10:	62 c0       	rjmp	.+196    	; 0xd6 <__bad_interrupt>
+  12:	61 c0       	rjmp	.+194    	; 0xd6 <__bad_interrupt>
+  14:	60 c0       	rjmp	.+192    	; 0xd6 <__bad_interrupt>
+  16:	5f c0       	rjmp	.+190    	; 0xd6 <__bad_interrupt>
+  18:	5e c0       	rjmp	.+188    	; 0xd6 <__bad_interrupt>
+  1a:	5d c0       	rjmp	.+186    	; 0xd6 <__bad_interrupt>
+  1c:	5c c0       	rjmp	.+184    	; 0xd6 <__bad_interrupt>
+  1e:	5b c0       	rjmp	.+182    	; 0xd6 <__bad_interrupt>
+  20:	5a c0       	rjmp	.+180    	; 0xd6 <__bad_interrupt>
+  22:	59 c0       	rjmp	.+178    	; 0xd6 <__bad_interrupt>
+  24:	58 c0       	rjmp	.+176    	; 0xd6 <__bad_interrupt>
+  26:	92 c0       	rjmp	.+292    	; 0x14c <displayChar+0x1e>
+  28:	98 c0       	rjmp	.+304    	; 0x15a <displayChar+0x2c>
+  2a:	9e c0       	rjmp	.+316    	; 0x168 <displayChar+0x3a>
+  2c:	a4 c0       	rjmp	.+328    	; 0x176 <displayChar+0x48>
+  2e:	aa c0       	rjmp	.+340    	; 0x184 <displayChar+0x56>
+  30:	b0 c0       	rjmp	.+352    	; 0x192 <displayChar+0x64>
+  32:	b6 c0       	rjmp	.+364    	; 0x1a0 <displayChar+0x72>
+  34:	bc c0       	rjmp	.+376    	; 0x1ae <displayChar+0x80>
+  36:	c2 c0       	rjmp	.+388    	; 0x1bc <displayChar+0x8e>
+  38:	c8 c0       	rjmp	.+400    	; 0x1ca <displayChar+0x9c>
+  3a:	d4 c0       	rjmp	.+424    	; 0x1e4 <displayChar+0xb6>
+  3c:	d3 c0       	rjmp	.+422    	; 0x1e4 <displayChar+0xb6>
+  3e:	d2 c0       	rjmp	.+420    	; 0x1e4 <displayChar+0xb6>
+  40:	d1 c0       	rjmp	.+418    	; 0x1e4 <displayChar+0xb6>
+  42:	d0 c0       	rjmp	.+416    	; 0x1e4 <displayChar+0xb6>
+  44:	cf c0       	rjmp	.+414    	; 0x1e4 <displayChar+0xb6>
+  46:	ce c0       	rjmp	.+412    	; 0x1e4 <displayChar+0xb6>
+  48:	cd c0       	rjmp	.+410    	; 0x1e4 <displayChar+0xb6>
+  4a:	cc c0       	rjmp	.+408    	; 0x1e4 <displayChar+0xb6>
+  4c:	cb c0       	rjmp	.+406    	; 0x1e4 <displayChar+0xb6>
+  4e:	ca c0       	rjmp	.+404    	; 0x1e4 <displayChar+0xb6>
+  50:	c9 c0       	rjmp	.+402    	; 0x1e4 <displayChar+0xb6>
+  52:	c8 c0       	rjmp	.+400    	; 0x1e4 <displayChar+0xb6>
+  54:	c7 c0       	rjmp	.+398    	; 0x1e4 <displayChar+0xb6>
+  56:	c6 c0       	rjmp	.+396    	; 0x1e4 <displayChar+0xb6>
+  58:	c5 c0       	rjmp	.+394    	; 0x1e4 <displayChar+0xb6>
+  5a:	c4 c0       	rjmp	.+392    	; 0x1e4 <displayChar+0xb6>
+  5c:	c3 c0       	rjmp	.+390    	; 0x1e4 <displayChar+0xb6>
+  5e:	c2 c0       	rjmp	.+388    	; 0x1e4 <displayChar+0xb6>
+  60:	c1 c0       	rjmp	.+386    	; 0x1e4 <displayChar+0xb6>
+  62:	c0 c0       	rjmp	.+384    	; 0x1e4 <displayChar+0xb6>
+  64:	bf c0       	rjmp	.+382    	; 0x1e4 <displayChar+0xb6>
+  66:	be c0       	rjmp	.+380    	; 0x1e4 <displayChar+0xb6>
+  68:	bd c0       	rjmp	.+378    	; 0x1e4 <displayChar+0xb6>
+  6a:	bc c0       	rjmp	.+376    	; 0x1e4 <displayChar+0xb6>
+  6c:	bb c0       	rjmp	.+374    	; 0x1e4 <displayChar+0xb6>
+  6e:	ba c0       	rjmp	.+372    	; 0x1e4 <displayChar+0xb6>
+  70:	b9 c0       	rjmp	.+370    	; 0x1e4 <displayChar+0xb6>
+  72:	b8 c0       	rjmp	.+368    	; 0x1e4 <displayChar+0xb6>
+  74:	b7 c0       	rjmp	.+366    	; 0x1e4 <displayChar+0xb6>
+  76:	b6 c0       	rjmp	.+364    	; 0x1e4 <displayChar+0xb6>
+  78:	b5 c0       	rjmp	.+362    	; 0x1e4 <displayChar+0xb6>
+  7a:	b4 c0       	rjmp	.+360    	; 0x1e4 <displayChar+0xb6>
+  7c:	b3 c0       	rjmp	.+358    	; 0x1e4 <displayChar+0xb6>
+  7e:	b2 c0       	rjmp	.+356    	; 0x1e4 <displayChar+0xb6>
+  80:	b1 c0       	rjmp	.+354    	; 0x1e4 <displayChar+0xb6>
+  82:	b0 c0       	rjmp	.+352    	; 0x1e4 <displayChar+0xb6>
+  84:	af c0       	rjmp	.+350    	; 0x1e4 <displayChar+0xb6>
+  86:	ae c0       	rjmp	.+348    	; 0x1e4 <displayChar+0xb6>
+  88:	ad c0       	rjmp	.+346    	; 0x1e4 <displayChar+0xb6>
+  8a:	ac c0       	rjmp	.+344    	; 0x1e4 <displayChar+0xb6>
+  8c:	ab c0       	rjmp	.+342    	; 0x1e4 <displayChar+0xb6>
+  8e:	aa c0       	rjmp	.+340    	; 0x1e4 <displayChar+0xb6>
+  90:	a9 c0       	rjmp	.+338    	; 0x1e4 <displayChar+0xb6>
+  92:	a8 c0       	rjmp	.+336    	; 0x1e4 <displayChar+0xb6>
+  94:	a7 c0       	rjmp	.+334    	; 0x1e4 <displayChar+0xb6>
+  96:	a6 c0       	rjmp	.+332    	; 0x1e4 <displayChar+0xb6>
+  98:	a5 c0       	rjmp	.+330    	; 0x1e4 <displayChar+0xb6>
+  9a:	a4 c0       	rjmp	.+328    	; 0x1e4 <displayChar+0xb6>
+  9c:	a3 c0       	rjmp	.+326    	; 0x1e4 <displayChar+0xb6>
+  9e:	a2 c0       	rjmp	.+324    	; 0x1e4 <displayChar+0xb6>
+  a0:	a1 c0       	rjmp	.+322    	; 0x1e4 <displayChar+0xb6>
+  a2:	a0 c0       	rjmp	.+320    	; 0x1e4 <displayChar+0xb6>
+  a4:	9f c0       	rjmp	.+318    	; 0x1e4 <displayChar+0xb6>
+  a6:	9e c0       	rjmp	.+316    	; 0x1e4 <displayChar+0xb6>
+  a8:	9d c0       	rjmp	.+314    	; 0x1e4 <displayChar+0xb6>
+  aa:	9c c0       	rjmp	.+312    	; 0x1e4 <displayChar+0xb6>
+  ac:	9b c0       	rjmp	.+310    	; 0x1e4 <displayChar+0xb6>
+  ae:	9a c0       	rjmp	.+308    	; 0x1e4 <displayChar+0xb6>
+  b0:	93 c0       	rjmp	.+294    	; 0x1d8 <displayChar+0xaa>
+  b2:	c8 c0       	rjmp	.+400    	; 0x244 <display4DigitNumber+0x5a>
+  b4:	cd c0       	rjmp	.+410    	; 0x250 <display4DigitNumber+0x66>
+  b6:	d2 c0       	rjmp	.+420    	; 0x25c <display4DigitNumber+0x72>
+  b8:	d7 c0       	rjmp	.+430    	; 0x268 <display4DigitNumber+0x7e>
+  ba:	dc c0       	rjmp	.+440    	; 0x274 <display4DigitNumber+0x8a>
+  bc:	e1 c0       	rjmp	.+450    	; 0x280 <display4DigitNumber+0x96>
+  be:	e6 c0       	rjmp	.+460    	; 0x28c <display4DigitNumber+0xa2>
+  c0:	eb c0       	rjmp	.+470    	; 0x298 <display4DigitNumber+0xae>
+  c2:	f0 c0       	rjmp	.+480    	; 0x2a4 <display4DigitNumber+0xba>
+  c4:	f5 c0       	rjmp	.+490    	; 0x2b0 <display4DigitNumber+0xc6>
+
+000000c6 <__ctors_end>:
+  c6:	11 24       	eor	r1, r1
+  c8:	1f be       	out	0x3f, r1	; 63
+  ca:	cf e5       	ldi	r28, 0x5F	; 95
+  cc:	d4 e0       	ldi	r29, 0x04	; 4
+  ce:	de bf       	out	0x3e, r29	; 62
+  d0:	cd bf       	out	0x3d, r28	; 61
+  d2:	d4 d1       	rcall	.+936    	; 0x47c <main>
+  d4:	11 c3       	rjmp	.+1570   	; 0x6f8 <_exit>
+
+000000d6 <__bad_interrupt>:
+  d6:	94 cf       	rjmp	.-216    	; 0x0 <__vectors>
+
+000000d8 <I2C_PCF8574>:
+/*  Function takes an address of a device and sends the data to it. */
+
+
+uint8_t I2C_PCF8574(uint8_t deviceAdr, uint8_t dispIndex)
+{
+	TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN); 
+  d8:	94 ea       	ldi	r25, 0xA4	; 164
+  da:	96 bf       	out	0x36, r25	; 54
+	while (!(TWCR & (1<<TWINT)));
+  dc:	06 b6       	in	r0, 0x36	; 54
+  de:	07 fe       	sbrs	r0, 7
+  e0:	fd cf       	rjmp	.-6      	; 0xdc <I2C_PCF8574+0x4>
+	
+	if ((TWSR & 0xF8) != TW_START)
+  e2:	91 b1       	in	r25, 0x01	; 1
+  e4:	98 7f       	andi	r25, 0xF8	; 248
+  e6:	98 30       	cpi	r25, 0x08	; 8
+  e8:	19 f0       	breq	.+6      	; 0xf0 <I2C_PCF8574+0x18>
+	{
+		return TWSR & 0xF8; 
+  ea:	81 b1       	in	r24, 0x01	; 1
+  ec:	88 7f       	andi	r24, 0xF8	; 248
+  ee:	08 95       	ret
+	}
+	
+	TWDR = deviceAdr;	 //Load the pcf8574 adress to TWDR
+  f0:	83 b9       	out	0x03, r24	; 3
+	
+	TWCR = (1<<TWINT) | (1<<TWEN);
+  f2:	84 e8       	ldi	r24, 0x84	; 132
+  f4:	86 bf       	out	0x36, r24	; 54
+	while (!(TWCR & (1<<TWINT)));
+  f6:	06 b6       	in	r0, 0x36	; 54
+  f8:	07 fe       	sbrs	r0, 7
+  fa:	fd cf       	rjmp	.-6      	; 0xf6 <I2C_PCF8574+0x1e>
+	
+	if ((TWSR & 0xF8) !=TW_MT_SLA_ACK)
+  fc:	81 b1       	in	r24, 0x01	; 1
+  fe:	88 7f       	andi	r24, 0xF8	; 248
+ 100:	88 31       	cpi	r24, 0x18	; 24
+ 102:	19 f0       	breq	.+6      	; 0x10a <I2C_PCF8574+0x32>
+	{
+		return TWSR & 0xF8;
+ 104:	81 b1       	in	r24, 0x01	; 1
+ 106:	88 7f       	andi	r24, 0xF8	; 248
+ 108:	08 95       	ret
+	}
+	
+	TWDR = ~dispIndex; // dispIndex is a byte of data to configure outputs of the expander. Negation of this byte is caused by
+ 10a:	60 95       	com	r22
+ 10c:	63 b9       	out	0x03, r22	; 3
+					   // the usage of pnp transistors on the board
+	
+	TWCR = (1<<TWINT) | (1<<TWEN);
+ 10e:	84 e8       	ldi	r24, 0x84	; 132
+ 110:	86 bf       	out	0x36, r24	; 54
+	while (!(TWCR & (1<<TWINT)));
+ 112:	06 b6       	in	r0, 0x36	; 54
+ 114:	07 fe       	sbrs	r0, 7
+ 116:	fd cf       	rjmp	.-6      	; 0x112 <I2C_PCF8574+0x3a>
+	
+	if ((TWSR & 0xF8) !=TW_MT_DATA_ACK)
+ 118:	81 b1       	in	r24, 0x01	; 1
+ 11a:	88 7f       	andi	r24, 0xF8	; 248
+ 11c:	88 32       	cpi	r24, 0x28	; 40
+ 11e:	19 f0       	breq	.+6      	; 0x126 <I2C_PCF8574+0x4e>
+	{
+		return TWSR & 0xF8;
+ 120:	81 b1       	in	r24, 0x01	; 1
+ 122:	88 7f       	andi	r24, 0xF8	; 248
+ 124:	08 95       	ret
+	}
+	
+	TWCR = (1<<TWINT)|(1<<TWEN)|(1<<TWSTO);
+ 126:	84 e9       	ldi	r24, 0x94	; 148
+ 128:	86 bf       	out	0x36, r24	; 54
+	
+	return 0;
+ 12a:	80 e0       	ldi	r24, 0x00	; 0
+	 
+}
+ 12c:	08 95       	ret
+
+0000012e <displayChar>:
+
+uint8_t displayChar(char charToDisplay, uint8_t (*I2C_PCF8574)(uint8_t deviceAdr, uint8_t dispIndex), uint8_t dispIndex)
+	/* Displays one char (charToDisplay) on a desired display selected by dispIndex. The switch-case instructions may be
+	   changed regarding to the pinout of 7-seg. display.                                                                   */
+
+{	
+ 12e:	cf 93       	push	r28
+ 130:	c8 2f       	mov	r28, r24
+ 132:	fb 01       	movw	r30, r22
+		I2C_PCF8574(PCF8574ADR, dispIndex); // Turns on the desired display.
+ 134:	64 2f       	mov	r22, r20
+ 136:	80 e4       	ldi	r24, 0x40	; 64
+ 138:	09 95       	icall
+		
+		switch(charToDisplay)
+ 13a:	ec 2f       	mov	r30, r28
+ 13c:	f0 e0       	ldi	r31, 0x00	; 0
+ 13e:	e6 34       	cpi	r30, 0x46	; 70
+ 140:	f1 05       	cpc	r31, r1
+ 142:	08 f0       	brcs	.+2      	; 0x146 <displayChar+0x18>
+ 144:	4f c0       	rjmp	.+158    	; 0x1e4 <displayChar+0xb6>
+ 146:	ed 5e       	subi	r30, 0xED	; 237
+ 148:	ff 4f       	sbci	r31, 0xFF	; 255
+ 14a:	09 94       	ijmp
+		{
+			case 0:
+			PORTB = ((~( _BV(PB3) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+ 14c:	88 b3       	in	r24, 0x18	; 24
+ 14e:	80 7c       	andi	r24, 0xC0	; 192
+ 150:	87 60       	ori	r24, 0x07	; 7
+ 152:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) | _BV(PC1) | _BV(PC2) );
+ 154:	88 ef       	ldi	r24, 0xF8	; 248
+ 156:	85 bb       	out	0x15, r24	; 21
+			break;
+ 158:	45 c0       	rjmp	.+138    	; 0x1e4 <displayChar+0xb6>
+			
+			case 1:
+			PORTB = ((~(_BV(PB3) | _BV(PB4))) & 0b00111111)  | (PORTB & 0b11000000);
+ 15a:	88 b3       	in	r24, 0x18	; 24
+ 15c:	80 7c       	andi	r24, 0xC0	; 192
+ 15e:	87 62       	ori	r24, 0x27	; 39
+ 160:	88 bb       	out	0x18, r24	; 24
+			PORTC = (_BV(PC0) | _BV(PC1) | _BV(PC2));
+ 162:	87 e0       	ldi	r24, 0x07	; 7
+ 164:	85 bb       	out	0x15, r24	; 21
+			break;
+ 166:	3e c0       	rjmp	.+124    	; 0x1e4 <displayChar+0xb6>
+			
+			case 2:
+			PORTB = ((~( _BV(PB2) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+ 168:	88 b3       	in	r24, 0x18	; 24
+ 16a:	80 7c       	andi	r24, 0xC0	; 192
+ 16c:	8b 60       	ori	r24, 0x0B	; 11
+ 16e:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) | _BV(PC2) );
+ 170:	8a ef       	ldi	r24, 0xFA	; 250
+ 172:	85 bb       	out	0x15, r24	; 21
+			break;
+ 174:	37 c0       	rjmp	.+110    	; 0x1e4 <displayChar+0xb6>
+			
+			case 3:
+			PORTB = ((~( _BV(PB2) | _BV(PB3) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+ 176:	88 b3       	in	r24, 0x18	; 24
+ 178:	80 7c       	andi	r24, 0xC0	; 192
+ 17a:	83 60       	ori	r24, 0x03	; 3
+ 17c:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) );
+ 17e:	8e ef       	ldi	r24, 0xFE	; 254
+ 180:	85 bb       	out	0x15, r24	; 21
+			break;
+ 182:	30 c0       	rjmp	.+96     	; 0x1e4 <displayChar+0xb6>
+			
+			case 4:
+			PORTB = ((~( _BV(PB3) | _BV(PB2) | _BV(PB4))) & 0b00111111) | (PORTB & 0b11000000);
+ 184:	88 b3       	in	r24, 0x18	; 24
+ 186:	80 7c       	andi	r24, 0xC0	; 192
+ 188:	83 62       	ori	r24, 0x23	; 35
+ 18a:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC1) );
+ 18c:	8d ef       	ldi	r24, 0xFD	; 253
+ 18e:	85 bb       	out	0x15, r24	; 21
+			break;
+ 190:	29 c0       	rjmp	.+82     	; 0x1e4 <displayChar+0xb6>
+			
+			case 5:
+			PORTB = ((~( _BV(PB2) | _BV(PB3)  | _BV(PB5))) & 0b00111111 ) | (PORTB & 0b11000000);
+ 192:	88 b3       	in	r24, 0x18	; 24
+ 194:	80 7c       	andi	r24, 0xC0	; 192
+ 196:	83 61       	ori	r24, 0x13	; 19
+ 198:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) | _BV(PC1) );
+ 19a:	8c ef       	ldi	r24, 0xFC	; 252
+ 19c:	85 bb       	out	0x15, r24	; 21
+			break;
+ 19e:	22 c0       	rjmp	.+68     	; 0x1e4 <displayChar+0xb6>
+			
+			case 6:
+			PORTB = ((~( _BV(PB2) | _BV(PB3)  | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+ 1a0:	88 b3       	in	r24, 0x18	; 24
+ 1a2:	80 7c       	andi	r24, 0xC0	; 192
+ 1a4:	83 61       	ori	r24, 0x13	; 19
+ 1a6:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) | _BV(PC1) | _BV(PC2) );
+ 1a8:	88 ef       	ldi	r24, 0xF8	; 248
+ 1aa:	85 bb       	out	0x15, r24	; 21
+			break;
+ 1ac:	1b c0       	rjmp	.+54     	; 0x1e4 <displayChar+0xb6>
+			
+			case 7:
+			PORTB = ((~(_BV(PB3) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+ 1ae:	88 b3       	in	r24, 0x18	; 24
+ 1b0:	80 7c       	andi	r24, 0xC0	; 192
+ 1b2:	87 60       	ori	r24, 0x07	; 7
+ 1b4:	88 bb       	out	0x18, r24	; 24
+			PORTC = (_BV(PC1) | _BV(PC0) | _BV(PC2));
+ 1b6:	87 e0       	ldi	r24, 0x07	; 7
+ 1b8:	85 bb       	out	0x15, r24	; 21
+			break;
+ 1ba:	14 c0       	rjmp	.+40     	; 0x1e4 <displayChar+0xb6>
+			
+			case 8:
+			PORTB = ((~( _BV(PB2) | _BV(PB3) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+ 1bc:	88 b3       	in	r24, 0x18	; 24
+ 1be:	80 7c       	andi	r24, 0xC0	; 192
+ 1c0:	83 60       	ori	r24, 0x03	; 3
+ 1c2:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) | _BV(PC1) | _BV(PC2) );
+ 1c4:	88 ef       	ldi	r24, 0xF8	; 248
+ 1c6:	85 bb       	out	0x15, r24	; 21
+			break;
+ 1c8:	0d c0       	rjmp	.+26     	; 0x1e4 <displayChar+0xb6>
+			
+			case 9:
+			PORTB = ((~( _BV(PB2) | _BV(PB3) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+ 1ca:	88 b3       	in	r24, 0x18	; 24
+ 1cc:	80 7c       	andi	r24, 0xC0	; 192
+ 1ce:	83 60       	ori	r24, 0x03	; 3
+ 1d0:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) | _BV(PC1)  );
+ 1d2:	8c ef       	ldi	r24, 0xFC	; 252
+ 1d4:	85 bb       	out	0x15, r24	; 21
+			break;
+ 1d6:	06 c0       	rjmp	.+12     	; 0x1e4 <displayChar+0xb6>
+			
+			case 'E':
+			PORTB = (~( _BV(PB2) | _BV(PB5)) & 0b00111111) | (PORTB & 0b11000000);
+ 1d8:	88 b3       	in	r24, 0x18	; 24
+ 1da:	80 7c       	andi	r24, 0xC0	; 192
+ 1dc:	8b 61       	ori	r24, 0x1B	; 27
+ 1de:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) | _BV(PC1) | _BV(PC2));
+ 1e0:	88 ef       	ldi	r24, 0xF8	; 248
+ 1e2:	85 bb       	out	0x15, r24	; 21
+			
+		}
+		return 0;
+}
+ 1e4:	80 e0       	ldi	r24, 0x00	; 0
+ 1e6:	cf 91       	pop	r28
+ 1e8:	08 95       	ret
+
+000001ea <display4DigitNumber>:
+
+//CONSIDER REBULIDING THE display4DigitNumber TO USE THE POINTER FOR displayChar FUNCION 
+uint8_t display4DigitNumber(uint8_t *finalValue, uint8_t (*I2C_PCF8574)(uint8_t deviceAdr, uint8_t dispIndex), uint8_t loopAux_0)
+{
+ 1ea:	6f 92       	push	r6
+ 1ec:	7f 92       	push	r7
+ 1ee:	8f 92       	push	r8
+ 1f0:	9f 92       	push	r9
+ 1f2:	af 92       	push	r10
+ 1f4:	bf 92       	push	r11
+ 1f6:	cf 92       	push	r12
+ 1f8:	df 92       	push	r13
+ 1fa:	ef 92       	push	r14
+ 1fc:	1f 93       	push	r17
+ 1fe:	cf 93       	push	r28
+ 200:	df 93       	push	r29
+ 202:	3b 01       	movw	r6, r22
+	uint8_t loopAux_1, dispIndex;
+	
+	if(loopAux_0 == 0) dispIndex = 1; // These two lines are responsible for observing which display is being edited (nr 1 or nr 2). 
+ 204:	44 23       	and	r20, r20
+ 206:	09 f4       	brne	.+2      	; 0x20a <display4DigitNumber+0x20>
+ 208:	67 c0       	rjmp	.+206    	; 0x2d8 <display4DigitNumber+0xee>
+	else dispIndex = 16;			  // ## See line 17 for a more detailed description ##
+ 20a:	10 e1       	ldi	r17, 0x10	; 16
+ 20c:	66 c0       	rjmp	.+204    	; 0x2da <display4DigitNumber+0xf0>
+	 
+	
+	for(loopAux_1 = 0, dispIndex; loopAux_1 < 4 ; loopAux_1++, dispIndex = dispIndex*2)
+	{
+		
+		I2C_PCF8574(PCF8574ADR, dispIndex); // Turns on the desired display.
+ 20e:	61 2f       	mov	r22, r17
+ 210:	80 e4       	ldi	r24, 0x40	; 64
+ 212:	f3 01       	movw	r30, r6
+ 214:	09 95       	icall
+		
+		if(dispIndex == 2 || dispIndex == 32)
+ 216:	12 30       	cpi	r17, 0x02	; 2
+ 218:	11 f0       	breq	.+4      	; 0x21e <display4DigitNumber+0x34>
+ 21a:	10 32       	cpi	r17, 0x20	; 32
+ 21c:	51 f4       	brne	.+20     	; 0x232 <display4DigitNumber+0x48>
+		{
+			PORTB = (~( _BV(PB1)) & 0b00111111) | (PORTB & 0b11000000);
+ 21e:	88 b3       	in	r24, 0x18	; 24
+ 220:	80 7c       	andi	r24, 0xC0	; 192
+ 222:	8d 63       	ori	r24, 0x3D	; 61
+ 224:	88 bb       	out	0x18, r24	; 24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 226:	87 ee       	ldi	r24, 0xE7	; 231
+ 228:	93 e0       	ldi	r25, 0x03	; 3
+ 22a:	01 97       	sbiw	r24, 0x01	; 1
+ 22c:	f1 f7       	brne	.-4      	; 0x22a <display4DigitNumber+0x40>
+ 22e:	00 c0       	rjmp	.+0      	; 0x230 <display4DigitNumber+0x46>
+ 230:	00 00       	nop
+			_delay_us(500);
+		}
+	
+		switch(finalValue[loopAux_1])
+ 232:	89 91       	ld	r24, Y+
+ 234:	e8 2f       	mov	r30, r24
+ 236:	f0 e0       	ldi	r31, 0x00	; 0
+ 238:	ea 30       	cpi	r30, 0x0A	; 10
+ 23a:	f1 05       	cpc	r31, r1
+ 23c:	f0 f5       	brcc	.+124    	; 0x2ba <display4DigitNumber+0xd0>
+ 23e:	e7 5a       	subi	r30, 0xA7	; 167
+ 240:	ff 4f       	sbci	r31, 0xFF	; 255
+ 242:	09 94       	ijmp
+		{
+			case 0:
+			PORTB = ((~( _BV(PB3) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000); 
+ 244:	88 b3       	in	r24, 0x18	; 24
+ 246:	80 7c       	andi	r24, 0xC0	; 192
+ 248:	87 60       	ori	r24, 0x07	; 7
+ 24a:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) | _BV(PC1) | _BV(PC2) );
+ 24c:	c5 ba       	out	0x15, r12	; 21
+			break;
+ 24e:	35 c0       	rjmp	.+106    	; 0x2ba <display4DigitNumber+0xd0>
+			
+			case 1:
+			PORTB = ((~(_BV(PB3) | _BV(PB4))) & 0b00111111)  | (PORTB & 0b11000000);
+ 250:	88 b3       	in	r24, 0x18	; 24
+ 252:	80 7c       	andi	r24, 0xC0	; 192
+ 254:	87 62       	ori	r24, 0x27	; 39
+ 256:	88 bb       	out	0x18, r24	; 24
+			PORTC = (_BV(PC0) | _BV(PC1) | _BV(PC2));
+ 258:	d5 ba       	out	0x15, r13	; 21
+			break;
+ 25a:	2f c0       	rjmp	.+94     	; 0x2ba <display4DigitNumber+0xd0>
+			
+			case 2:
+			PORTB = ((~( _BV(PB2) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+ 25c:	88 b3       	in	r24, 0x18	; 24
+ 25e:	80 7c       	andi	r24, 0xC0	; 192
+ 260:	8b 60       	ori	r24, 0x0B	; 11
+ 262:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) | _BV(PC2) );
+ 264:	a5 ba       	out	0x15, r10	; 21
+			break;
+ 266:	29 c0       	rjmp	.+82     	; 0x2ba <display4DigitNumber+0xd0>
+			
+			case 3:
+			PORTB = ((~( _BV(PB2) | _BV(PB3) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+ 268:	88 b3       	in	r24, 0x18	; 24
+ 26a:	80 7c       	andi	r24, 0xC0	; 192
+ 26c:	83 60       	ori	r24, 0x03	; 3
+ 26e:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) );
+ 270:	95 ba       	out	0x15, r9	; 21
+			break;
+ 272:	23 c0       	rjmp	.+70     	; 0x2ba <display4DigitNumber+0xd0>
+			
+			case 4:
+			PORTB = ((~( _BV(PB3) | _BV(PB2) | _BV(PB4))) & 0b00111111) | (PORTB & 0b11000000);
+ 274:	88 b3       	in	r24, 0x18	; 24
+ 276:	80 7c       	andi	r24, 0xC0	; 192
+ 278:	83 62       	ori	r24, 0x23	; 35
+ 27a:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC1) );
+ 27c:	85 ba       	out	0x15, r8	; 21
+			break;
+ 27e:	1d c0       	rjmp	.+58     	; 0x2ba <display4DigitNumber+0xd0>
+			
+			case 5:
+			PORTB = ((~( _BV(PB2) | _BV(PB3)  | _BV(PB5))) & 0b00111111 ) | (PORTB & 0b11000000);
+ 280:	88 b3       	in	r24, 0x18	; 24
+ 282:	80 7c       	andi	r24, 0xC0	; 192
+ 284:	83 61       	ori	r24, 0x13	; 19
+ 286:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) | _BV(PC1) );
+ 288:	b5 ba       	out	0x15, r11	; 21
+			break;
+ 28a:	17 c0       	rjmp	.+46     	; 0x2ba <display4DigitNumber+0xd0>
+			
+			case 6:
+			PORTB = ((~( _BV(PB2) | _BV(PB3)  | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+ 28c:	88 b3       	in	r24, 0x18	; 24
+ 28e:	80 7c       	andi	r24, 0xC0	; 192
+ 290:	83 61       	ori	r24, 0x13	; 19
+ 292:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) | _BV(PC1) | _BV(PC2) );
+ 294:	c5 ba       	out	0x15, r12	; 21
+			break;
+ 296:	11 c0       	rjmp	.+34     	; 0x2ba <display4DigitNumber+0xd0>
+			
+			case 7:
+			PORTB = ((~(_BV(PB3) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+ 298:	88 b3       	in	r24, 0x18	; 24
+ 29a:	80 7c       	andi	r24, 0xC0	; 192
+ 29c:	87 60       	ori	r24, 0x07	; 7
+ 29e:	88 bb       	out	0x18, r24	; 24
+			PORTC = (_BV(PC1) | _BV(PC0) | _BV(PC2));
+ 2a0:	d5 ba       	out	0x15, r13	; 21
+			break;
+ 2a2:	0b c0       	rjmp	.+22     	; 0x2ba <display4DigitNumber+0xd0>
+			
+			case 8:
+			PORTB = ((~( _BV(PB2) | _BV(PB3) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+ 2a4:	88 b3       	in	r24, 0x18	; 24
+ 2a6:	80 7c       	andi	r24, 0xC0	; 192
+ 2a8:	83 60       	ori	r24, 0x03	; 3
+ 2aa:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) | _BV(PC1) | _BV(PC2) );
+ 2ac:	c5 ba       	out	0x15, r12	; 21
+			break;
+ 2ae:	05 c0       	rjmp	.+10     	; 0x2ba <display4DigitNumber+0xd0>
+			
+			case 9:
+			PORTB = ((~( _BV(PB2) | _BV(PB3) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+ 2b0:	88 b3       	in	r24, 0x18	; 24
+ 2b2:	80 7c       	andi	r24, 0xC0	; 192
+ 2b4:	83 60       	ori	r24, 0x03	; 3
+ 2b6:	88 bb       	out	0x18, r24	; 24
+			PORTC = ~( _BV(PC0) | _BV(PC1)  );
+ 2b8:	b5 ba       	out	0x15, r11	; 21
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 2ba:	ef e9       	ldi	r30, 0x9F	; 159
+ 2bc:	ff e0       	ldi	r31, 0x0F	; 15
+ 2be:	31 97       	sbiw	r30, 0x01	; 1
+ 2c0:	f1 f7       	brne	.-4      	; 0x2be <display4DigitNumber+0xd4>
+ 2c2:	00 c0       	rjmp	.+0      	; 0x2c4 <display4DigitNumber+0xda>
+ 2c4:	00 00       	nop
+			break;
+		}
+		_delay_ms(2);
+		PORTB |= (~(_BV(PB6) | _BV(PB7)) ) & 0b11111111;
+ 2c6:	88 b3       	in	r24, 0x18	; 24
+ 2c8:	8f 63       	ori	r24, 0x3F	; 63
+ 2ca:	88 bb       	out	0x18, r24	; 24
+		PORTC = (_BV(PC0) | _BV(PC1) | _BV(PC2));
+ 2cc:	d5 ba       	out	0x15, r13	; 21
+	if(loopAux_0 == 0) dispIndex = 1; // These two lines are responsible for observing which display is being edited (nr 1 or nr 2). 
+	else dispIndex = 16;			  // ## See line 17 for a more detailed description ##
+	
+	 
+	
+	for(loopAux_1 = 0, dispIndex; loopAux_1 < 4 ; loopAux_1++, dispIndex = dispIndex*2)
+ 2ce:	11 0f       	add	r17, r17
+ 2d0:	ea 94       	dec	r14
+ 2d2:	09 f0       	breq	.+2      	; 0x2d6 <display4DigitNumber+0xec>
+ 2d4:	9c cf       	rjmp	.-200    	; 0x20e <display4DigitNumber+0x24>
+ 2d6:	1f c0       	rjmp	.+62     	; 0x316 <display4DigitNumber+0x12c>
+//CONSIDER REBULIDING THE display4DigitNumber TO USE THE POINTER FOR displayChar FUNCION 
+uint8_t display4DigitNumber(uint8_t *finalValue, uint8_t (*I2C_PCF8574)(uint8_t deviceAdr, uint8_t dispIndex), uint8_t loopAux_0)
+{
+	uint8_t loopAux_1, dispIndex;
+	
+	if(loopAux_0 == 0) dispIndex = 1; // These two lines are responsible for observing which display is being edited (nr 1 or nr 2). 
+ 2d8:	11 e0       	ldi	r17, 0x01	; 1
+ 2da:	c8 2f       	mov	r28, r24
+ 2dc:	d9 2f       	mov	r29, r25
+		return 0;
+}
+
+//CONSIDER REBULIDING THE display4DigitNumber TO USE THE POINTER FOR displayChar FUNCION 
+uint8_t display4DigitNumber(uint8_t *finalValue, uint8_t (*I2C_PCF8574)(uint8_t deviceAdr, uint8_t dispIndex), uint8_t loopAux_0)
+{
+ 2de:	68 94       	set
+ 2e0:	ee 24       	eor	r14, r14
+ 2e2:	e2 f8       	bld	r14, 2
+			PORTC = ~( _BV(PC0) | _BV(PC1) | _BV(PC2) );
+			break;
+			
+			case 9:
+			PORTB = ((~( _BV(PB2) | _BV(PB3) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+			PORTC = ~( _BV(PC0) | _BV(PC1)  );
+ 2e4:	0f 2e       	mov	r0, r31
+ 2e6:	fc ef       	ldi	r31, 0xFC	; 252
+ 2e8:	bf 2e       	mov	r11, r31
+ 2ea:	f0 2d       	mov	r31, r0
+			PORTC = (_BV(PC1) | _BV(PC0) | _BV(PC2));
+			break;
+			
+			case 8:
+			PORTB = ((~( _BV(PB2) | _BV(PB3) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+			PORTC = ~( _BV(PC0) | _BV(PC1) | _BV(PC2) );
+ 2ec:	0f 2e       	mov	r0, r31
+ 2ee:	f8 ef       	ldi	r31, 0xF8	; 248
+ 2f0:	cf 2e       	mov	r12, r31
+ 2f2:	f0 2d       	mov	r31, r0
+			PORTC = ~( _BV(PC0) | _BV(PC1) | _BV(PC2) );
+			break;
+			
+			case 7:
+			PORTB = ((~(_BV(PB3) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+			PORTC = (_BV(PC1) | _BV(PC0) | _BV(PC2));
+ 2f4:	0f 2e       	mov	r0, r31
+ 2f6:	f7 e0       	ldi	r31, 0x07	; 7
+ 2f8:	df 2e       	mov	r13, r31
+ 2fa:	f0 2d       	mov	r31, r0
+			PORTC = ~( _BV(PC0) );
+			break;
+			
+			case 4:
+			PORTB = ((~( _BV(PB3) | _BV(PB2) | _BV(PB4))) & 0b00111111) | (PORTB & 0b11000000);
+			PORTC = ~( _BV(PC1) );
+ 2fc:	0f 2e       	mov	r0, r31
+ 2fe:	fd ef       	ldi	r31, 0xFD	; 253
+ 300:	8f 2e       	mov	r8, r31
+ 302:	f0 2d       	mov	r31, r0
+			PORTC = ~( _BV(PC0) | _BV(PC2) );
+			break;
+			
+			case 3:
+			PORTB = ((~( _BV(PB2) | _BV(PB3) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+			PORTC = ~( _BV(PC0) );
+ 304:	0f 2e       	mov	r0, r31
+ 306:	fe ef       	ldi	r31, 0xFE	; 254
+ 308:	9f 2e       	mov	r9, r31
+ 30a:	f0 2d       	mov	r31, r0
+			PORTC = (_BV(PC0) | _BV(PC1) | _BV(PC2));
+			break;
+			
+			case 2:
+			PORTB = ((~( _BV(PB2) | _BV(PB4) | _BV(PB5))) & 0b00111111) | (PORTB & 0b11000000);
+			PORTC = ~( _BV(PC0) | _BV(PC2) );
+ 30c:	0f 2e       	mov	r0, r31
+ 30e:	fa ef       	ldi	r31, 0xFA	; 250
+ 310:	af 2e       	mov	r10, r31
+ 312:	f0 2d       	mov	r31, r0
+ 314:	7c cf       	rjmp	.-264    	; 0x20e <display4DigitNumber+0x24>
+		PORTB |= (~(_BV(PB6) | _BV(PB7)) ) & 0b11111111;
+		PORTC = (_BV(PC0) | _BV(PC1) | _BV(PC2));
+	}
+	
+	return 0;
+}  
+ 316:	80 e0       	ldi	r24, 0x00	; 0
+ 318:	df 91       	pop	r29
+ 31a:	cf 91       	pop	r28
+ 31c:	1f 91       	pop	r17
+ 31e:	ef 90       	pop	r14
+ 320:	df 90       	pop	r13
+ 322:	cf 90       	pop	r12
+ 324:	bf 90       	pop	r11
+ 326:	af 90       	pop	r10
+ 328:	9f 90       	pop	r9
+ 32a:	8f 90       	pop	r8
+ 32c:	7f 90       	pop	r7
+ 32e:	6f 90       	pop	r6
+ 330:	08 95       	ret
+
+00000332 <binaryToVoltageConverter>:
+	   Function uses channelSelector to decide which division factor needs to be used for the 
+	   appropriate reading. DecimalPointShifter allows to avoid computing float type numbers.
+	   The position of a decimal point on the displays doesn't change.		 */
+
+
+{
+ 332:	5f 92       	push	r5
+ 334:	6f 92       	push	r6
+ 336:	7f 92       	push	r7
+ 338:	8f 92       	push	r8
+ 33a:	9f 92       	push	r9
+ 33c:	af 92       	push	r10
+ 33e:	bf 92       	push	r11
+ 340:	cf 92       	push	r12
+ 342:	df 92       	push	r13
+ 344:	ef 92       	push	r14
+ 346:	ff 92       	push	r15
+ 348:	0f 93       	push	r16
+ 34a:	1f 93       	push	r17
+ 34c:	cf 93       	push	r28
+ 34e:	df 93       	push	r29
+ 350:	f4 2e       	mov	r15, r20
+ 352:	15 2f       	mov	r17, r21
+	uint8_t currentDivFactor = 1;
+	uint8_t decimalPointShifter = 100; // Used to avoid calculating float type integers 
+	
+	switch(channelSelector) // Sets a proper division factor (currentDivFactor) depending on the channel being processed.
+ 354:	62 30       	cpi	r22, 0x02	; 2
+ 356:	29 f0       	breq	.+10     	; 0x362 <binaryToVoltageConverter+0x30>
+ 358:	40 f0       	brcs	.+16     	; 0x36a <binaryToVoltageConverter+0x38>
+ 35a:	63 30       	cpi	r22, 0x03	; 3
+ 35c:	21 f0       	breq	.+8      	; 0x366 <binaryToVoltageConverter+0x34>
+	   appropriate reading. DecimalPointShifter allows to avoid computing float type numbers.
+	   The position of a decimal point on the displays doesn't change.		 */
+
+
+{
+	uint8_t currentDivFactor = 1;
+ 35e:	c1 e0       	ldi	r28, 0x01	; 1
+ 360:	05 c0       	rjmp	.+10     	; 0x36c <binaryToVoltageConverter+0x3a>
+			case 0x01:
+			currentDivFactor = CH1_DIV_FACTOR;
+			break;
+			
+			case 0x02:
+			currentDivFactor = CH2_DIV_FACTOR;
+ 362:	c4 e1       	ldi	r28, 0x14	; 20
+			break;
+ 364:	03 c0       	rjmp	.+6      	; 0x36c <binaryToVoltageConverter+0x3a>
+			
+			case 0x03:
+			currentDivFactor = CH3_DIV_FACTOR;
+ 366:	c4 e1       	ldi	r28, 0x14	; 20
+			break;
+ 368:	01 c0       	rjmp	.+2      	; 0x36c <binaryToVoltageConverter+0x3a>
+	uint8_t decimalPointShifter = 100; // Used to avoid calculating float type integers 
+	
+	switch(channelSelector) // Sets a proper division factor (currentDivFactor) depending on the channel being processed.
+		{
+			case 0x00:
+			currentDivFactor = CH0_DIV_FACTOR;
+ 36a:	c8 e2       	ldi	r28, 0x28	; 40
+			currentDivFactor = CH3_DIV_FACTOR;
+			break;
+		}
+	 
+	
+	uint32_t resultVoltage = (  ( dataPacket*decimalPointShifter  / 255UL ) * REFERENCEVOLTAGE * currentDivFactor ); 
+ 36c:	94 e6       	ldi	r25, 0x64	; 100
+ 36e:	89 9f       	mul	r24, r25
+ 370:	b0 01       	movw	r22, r0
+ 372:	11 24       	eor	r1, r1
+ 374:	88 27       	eor	r24, r24
+ 376:	77 fd       	sbrc	r23, 7
+ 378:	80 95       	com	r24
+ 37a:	98 2f       	mov	r25, r24
+ 37c:	2f ef       	ldi	r18, 0xFF	; 255
+ 37e:	30 e0       	ldi	r19, 0x00	; 0
+ 380:	40 e0       	ldi	r20, 0x00	; 0
+ 382:	50 e0       	ldi	r21, 0x00	; 0
+ 384:	81 d1       	rcall	.+770    	; 0x688 <__udivmodsi4>
+ 386:	a0 e0       	ldi	r26, 0x00	; 0
+ 388:	ba e0       	ldi	r27, 0x0A	; 10
+ 38a:	a0 d1       	rcall	.+832    	; 0x6cc <__muluhisi3>
+ 38c:	9b 01       	movw	r18, r22
+ 38e:	ac 01       	movw	r20, r24
+ 390:	ac 2f       	mov	r26, r28
+ 392:	b0 e0       	ldi	r27, 0x00	; 0
+ 394:	9b d1       	rcall	.+822    	; 0x6cc <__muluhisi3>
+ 396:	56 2e       	mov	r5, r22
+ 398:	67 2e       	mov	r6, r23
+ 39a:	78 2e       	mov	r7, r24
+ 39c:	09 2f       	mov	r16, r25
+ 39e:	cf 2d       	mov	r28, r15
+ 3a0:	d1 2f       	mov	r29, r17
+									-currentDivFactor = a factor used to calculate voltage for different voltage ranges.
+								*/
+	uint8_t loop;
+	uint32_t factor;
+	
+	for(loop = 0, factor = 10000000; loop < 4 ; loop++, resultVoltage = (resultVoltage % factor), factor = factor/10 )
+ 3a2:	0f 2e       	mov	r0, r31
+ 3a4:	f0 e8       	ldi	r31, 0x80	; 128
+ 3a6:	cf 2e       	mov	r12, r31
+ 3a8:	f6 e9       	ldi	r31, 0x96	; 150
+ 3aa:	df 2e       	mov	r13, r31
+ 3ac:	f8 e9       	ldi	r31, 0x98	; 152
+ 3ae:	ef 2e       	mov	r14, r31
+ 3b0:	f1 2c       	mov	r15, r1
+ 3b2:	f0 2d       	mov	r31, r0
+ 3b4:	10 e0       	ldi	r17, 0x00	; 0
+ 3b6:	0f 2e       	mov	r0, r31
+ 3b8:	fa e0       	ldi	r31, 0x0A	; 10
+ 3ba:	8f 2e       	mov	r8, r31
+ 3bc:	91 2c       	mov	r9, r1
+ 3be:	a1 2c       	mov	r10, r1
+ 3c0:	b1 2c       	mov	r11, r1
+ 3c2:	f0 2d       	mov	r31, r0
+	{	
+		finalValue[loop] = resultVoltage/factor; // separates digits from a number (e.g. 2351 --> {2,3,5,1})
+ 3c4:	65 2d       	mov	r22, r5
+ 3c6:	76 2d       	mov	r23, r6
+ 3c8:	87 2d       	mov	r24, r7
+ 3ca:	90 2f       	mov	r25, r16
+ 3cc:	a7 01       	movw	r20, r14
+ 3ce:	96 01       	movw	r18, r12
+ 3d0:	5b d1       	rcall	.+694    	; 0x688 <__udivmodsi4>
+ 3d2:	29 93       	st	Y+, r18
+									-currentDivFactor = a factor used to calculate voltage for different voltage ranges.
+								*/
+	uint8_t loop;
+	uint32_t factor;
+	
+	for(loop = 0, factor = 10000000; loop < 4 ; loop++, resultVoltage = (resultVoltage % factor), factor = factor/10 )
+ 3d4:	1f 5f       	subi	r17, 0xFF	; 255
+ 3d6:	56 2e       	mov	r5, r22
+ 3d8:	67 2e       	mov	r6, r23
+ 3da:	78 2e       	mov	r7, r24
+ 3dc:	09 2f       	mov	r16, r25
+ 3de:	c7 01       	movw	r24, r14
+ 3e0:	b6 01       	movw	r22, r12
+ 3e2:	a5 01       	movw	r20, r10
+ 3e4:	94 01       	movw	r18, r8
+ 3e6:	50 d1       	rcall	.+672    	; 0x688 <__udivmodsi4>
+ 3e8:	69 01       	movw	r12, r18
+ 3ea:	7a 01       	movw	r14, r20
+ 3ec:	14 30       	cpi	r17, 0x04	; 4
+ 3ee:	51 f7       	brne	.-44     	; 0x3c4 <binaryToVoltageConverter+0x92>
+	{	
+		finalValue[loop] = resultVoltage/factor; // separates digits from a number (e.g. 2351 --> {2,3,5,1})
+	}
+}
+ 3f0:	df 91       	pop	r29
+ 3f2:	cf 91       	pop	r28
+ 3f4:	1f 91       	pop	r17
+ 3f6:	0f 91       	pop	r16
+ 3f8:	ff 90       	pop	r15
+ 3fa:	ef 90       	pop	r14
+ 3fc:	df 90       	pop	r13
+ 3fe:	cf 90       	pop	r12
+ 400:	bf 90       	pop	r11
+ 402:	af 90       	pop	r10
+ 404:	9f 90       	pop	r9
+ 406:	8f 90       	pop	r8
+ 408:	7f 90       	pop	r7
+ 40a:	6f 90       	pop	r6
+ 40c:	5f 90       	pop	r5
+ 40e:	08 95       	ret
+
+00000410 <I2C_PCF8591>:
+
+void I2C_PCF8591(uint8_t deviceAdr, uint8_t controlByte, uint8_t *dataPacket)
+{
+ 410:	0f 93       	push	r16
+ 412:	1f 93       	push	r17
+ 414:	cf 93       	push	r28
+ 416:	df 93       	push	r29
+ 418:	18 2f       	mov	r17, r24
+ 41a:	06 2f       	mov	r16, r22
+ 41c:	ea 01       	movw	r28, r20
+	
+	 i2c_init();       
+ 41e:	d1 d0       	rcall	.+418    	; 0x5c2 <i2c_init>
+
+	 i2c_start_wait(deviceAdr+I2C_WRITE);    
+ 420:	81 2f       	mov	r24, r17
+ 422:	f1 d0       	rcall	.+482    	; 0x606 <i2c_start_wait>
+	 i2c_write(controlByte);                                      
+ 424:	80 2f       	mov	r24, r16
+ 426:	15 d1       	rcall	.+554    	; 0x652 <i2c_write>
+	 i2c_stop();
+ 428:	0e d1       	rcall	.+540    	; 0x646 <i2c_stop>
+	                           
+	 i2c_rep_start(deviceAdr+I2C_READ);
+ 42a:	81 2f       	mov	r24, r17
+ 42c:	8f 5f       	subi	r24, 0xFF	; 255
+ 42e:	09 d1       	rcall	.+530    	; 0x642 <i2c_rep_start>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 430:	87 e5       	ldi	r24, 0x57	; 87
+ 432:	92 e0       	ldi	r25, 0x02	; 2
+ 434:	01 97       	sbiw	r24, 0x01	; 1
+ 436:	f1 f7       	brne	.-4      	; 0x434 <I2C_PCF8591+0x24>
+ 438:	00 c0       	rjmp	.+0      	; 0x43a <I2C_PCF8591+0x2a>
+ 43a:	00 00       	nop
+	 _delay_us(300);
+	 
+	 dataPacket[3] = i2c_readAck(); // Since each transmission delivers a previously done reading, I assign the 4th place of the array in the beginning.
+ 43c:	17 d1       	rcall	.+558    	; 0x66c <i2c_readAck>
+ 43e:	8b 83       	std	Y+3, r24	; 0x03
+ 440:	87 e5       	ldi	r24, 0x57	; 87
+ 442:	92 e0       	ldi	r25, 0x02	; 2
+ 444:	01 97       	sbiw	r24, 0x01	; 1
+ 446:	f1 f7       	brne	.-4      	; 0x444 <I2C_PCF8591+0x34>
+ 448:	00 c0       	rjmp	.+0      	; 0x44a <I2C_PCF8591+0x3a>
+ 44a:	00 00       	nop
+		 }
+								  // the transmission will be ended by sending NOTACKNOWLEDGE to ADC.
+		 else
+		 {	
+			 _delay_us(300);
+			 dataPacket[aux] = i2c_readAck();
+ 44c:	0f d1       	rcall	.+542    	; 0x66c <i2c_readAck>
+ 44e:	88 83       	st	Y, r24
+ 450:	87 e5       	ldi	r24, 0x57	; 87
+ 452:	92 e0       	ldi	r25, 0x02	; 2
+ 454:	01 97       	sbiw	r24, 0x01	; 1
+ 456:	f1 f7       	brne	.-4      	; 0x454 <I2C_PCF8591+0x44>
+ 458:	00 c0       	rjmp	.+0      	; 0x45a <I2C_PCF8591+0x4a>
+ 45a:	00 00       	nop
+ 45c:	07 d1       	rcall	.+526    	; 0x66c <i2c_readAck>
+ 45e:	89 83       	std	Y+1, r24	; 0x01
+ 460:	87 e5       	ldi	r24, 0x57	; 87
+ 462:	92 e0       	ldi	r25, 0x02	; 2
+ 464:	01 97       	sbiw	r24, 0x01	; 1
+ 466:	f1 f7       	brne	.-4      	; 0x464 <__stack+0x5>
+ 468:	00 c0       	rjmp	.+0      	; 0x46a <__stack+0xb>
+ 46a:	00 00       	nop
+	 {
+		 
+		 if(aux == 2)
+		 {
+			 _delay_us(300);
+			 dataPacket[2] = i2c_readNak();
+ 46c:	06 d1       	rcall	.+524    	; 0x67a <i2c_readNak>
+ 46e:	8a 83       	std	Y+2, r24	; 0x02
+			 _delay_us(300);
+			 dataPacket[aux] = i2c_readAck();
+		 }
+	 }              
+	 
+	 i2c_stop();
+ 470:	ea d0       	rcall	.+468    	; 0x646 <i2c_stop>
+}
+ 472:	df 91       	pop	r29
+ 474:	cf 91       	pop	r28
+ 476:	1f 91       	pop	r17
+ 478:	0f 91       	pop	r16
+ 47a:	08 95       	ret
+
+0000047c <main>:
+
+#define LED_ON 0b00001000 //PD3
+#define LED_USART 0b00000100 //PD2
+										 
+int main(void)
+{
+ 47c:	cf 93       	push	r28
+ 47e:	df 93       	push	r29
+ 480:	cd b7       	in	r28, 0x3d	; 61
+ 482:	de b7       	in	r29, 0x3e	; 62
+ 484:	28 97       	sbiw	r28, 0x08	; 8
+ 486:	0f b6       	in	r0, 0x3f	; 63
+ 488:	f8 94       	cli
+ 48a:	de bf       	out	0x3e, r29	; 62
+ 48c:	0f be       	out	0x3f, r0	; 63
+ 48e:	cd bf       	out	0x3d, r28	; 61
+	DDRB = 0b11111110;
+ 490:	8e ef       	ldi	r24, 0xFE	; 254
+ 492:	87 bb       	out	0x17, r24	; 23
+	PORTB = 0b00000001;
+ 494:	81 e0       	ldi	r24, 0x01	; 1
+ 496:	88 bb       	out	0x18, r24	; 24
+	
+	DDRC = 0xff;
+ 498:	8f ef       	ldi	r24, 0xFF	; 255
+ 49a:	84 bb       	out	0x14, r24	; 20
+	
+	DDRD = 0b00111111;
+ 49c:	8f e3       	ldi	r24, 0x3F	; 63
+ 49e:	81 bb       	out	0x11, r24	; 17
+	PORTD = 0b11000000;
+ 4a0:	80 ec       	ldi	r24, 0xC0	; 192
+ 4a2:	82 bb       	out	0x12, r24	; 18
+	
+	PORTD |= LED_ON;
+ 4a4:	93 9a       	sbi	0x12, 3	; 18
+   while(1)
+    {		
+		uint8_t selector = 0;  // determines an ADC channel to be read. Depends on the state of BUTTON_ONE and BUTTON_TWO and loopAux_0
+		uint8_t loopAux_0;
+		
+		for(loopAux_0 = 0 ; loopAux_0 < 2 ; loopAux_0++) //This sub-main loop does two runs because there are two displays(1) to handle.
+ 4a6:	10 e0       	ldi	r17, 0x00	; 0
+																- 7   = according to the datasheet, always zeroed
+														    */		
+
+   while(1)
+    {		
+		uint8_t selector = 0;  // determines an ADC channel to be read. Depends on the state of BUTTON_ONE and BUTTON_TWO and loopAux_0
+ 4a8:	00 e0       	ldi	r16, 0x00	; 0
+		uint8_t loopAux_0;
+		
+		for(loopAux_0 = 0 ; loopAux_0 < 2 ; loopAux_0++) //This sub-main loop does two runs because there are two displays(1) to handle.
+ 4aa:	f1 2c       	mov	r15, r1
+			I2C_PCF8591(PCF8591ADR, PCF8591_CONTROL_BYTE, dataPacket); 
+			
+			if(dataPacket[selector]>253)
+			{
+				uint8_t digitForError = 1;
+				if(loopAux_0 == 0) digitForError = 1;
+ 4ac:	ee 24       	eor	r14, r14
+ 4ae:	e3 94       	inc	r14
+				else digitForError = 16;
+ 4b0:	68 94       	set
+ 4b2:	dd 24       	eor	r13, r13
+ 4b4:	d4 f8       	bld	r13, 4
+						PORTB |= LED_2;
+						PORTB &= ~LED_3;
+					}
+					else
+					{
+						selector = 3;
+ 4b6:	0f 2e       	mov	r0, r31
+ 4b8:	f3 e0       	ldi	r31, 0x03	; 3
+ 4ba:	cf 2e       	mov	r12, r31
+ 4bc:	f0 2d       	mov	r31, r0
+					break;
+				
+				case 1:
+					if(PIND & BUTTON_TWO)
+					{
+						selector = 2;
+ 4be:	68 94       	set
+ 4c0:	bb 24       	eor	r11, r11
+ 4c2:	b1 f8       	bld	r11, 1
+ 4c4:	48 c0       	rjmp	.+144    	; 0x556 <main+0xda>
+		uint8_t selector = 0;  // determines an ADC channel to be read. Depends on the state of BUTTON_ONE and BUTTON_TWO and loopAux_0
+		uint8_t loopAux_0;
+		
+		for(loopAux_0 = 0 ; loopAux_0 < 2 ; loopAux_0++) //This sub-main loop does two runs because there are two displays(1) to handle.
+		{											     // (1)---> The 'display' term is understood as a set of four 7-segment digits put into one package.
+			switch(loopAux_0)
+ 4c6:	11 23       	and	r17, r17
+ 4c8:	19 f0       	breq	.+6      	; 0x4d0 <main+0x54>
+ 4ca:	11 30       	cpi	r17, 0x01	; 1
+ 4cc:	a9 f4       	brne	.+42     	; 0x4f8 <main+0x7c>
+ 4ce:	0a c0       	rjmp	.+20     	; 0x4e4 <main+0x68>
+			{
+				case 0:
+					if(PINB & BUTTON_ONE)
+ 4d0:	b0 9b       	sbis	0x16, 0	; 22
+ 4d2:	04 c0       	rjmp	.+8      	; 0x4dc <main+0x60>
+					{	
+						selector = 0; 
+						PORTD |= LED_0;
+ 4d4:	94 9a       	sbi	0x12, 4	; 18
+						PORTD &= ~LED_1;
+ 4d6:	95 98       	cbi	0x12, 5	; 18
+			switch(loopAux_0)
+			{
+				case 0:
+					if(PINB & BUTTON_ONE)
+					{	
+						selector = 0; 
+ 4d8:	0f 2d       	mov	r16, r15
+ 4da:	5a c0       	rjmp	.+180    	; 0x590 <main+0x114>
+					}
+						
+					else
+					{
+						selector = 1; 
+						PORTD |= LED_1;
+ 4dc:	95 9a       	sbi	0x12, 5	; 18
+						PORTD &= ~LED_0;
+ 4de:	94 98       	cbi	0x12, 4	; 18
+						PORTD &= ~LED_1;
+					}
+						
+					else
+					{
+						selector = 1; 
+ 4e0:	0e 2d       	mov	r16, r14
+ 4e2:	56 c0       	rjmp	.+172    	; 0x590 <main+0x114>
+					}
+					
+					break;
+				
+				case 1:
+					if(PIND & BUTTON_TWO)
+ 4e4:	87 9b       	sbis	0x10, 7	; 16
+ 4e6:	04 c0       	rjmp	.+8      	; 0x4f0 <main+0x74>
+					{
+						selector = 2;
+						PORTB |= LED_2;
+ 4e8:	c6 9a       	sbi	0x18, 6	; 24
+						PORTB &= ~LED_3;
+ 4ea:	c7 98       	cbi	0x18, 7	; 24
+					break;
+				
+				case 1:
+					if(PIND & BUTTON_TWO)
+					{
+						selector = 2;
+ 4ec:	0b 2d       	mov	r16, r11
+ 4ee:	38 c0       	rjmp	.+112    	; 0x560 <main+0xe4>
+						PORTB &= ~LED_3;
+					}
+					else
+					{
+						selector = 3;
+						PORTB |= LED_3;
+ 4f0:	c7 9a       	sbi	0x18, 7	; 24
+						PORTB &= ~LED_2;
+ 4f2:	c6 98       	cbi	0x18, 6	; 24
+						PORTB |= LED_2;
+						PORTB &= ~LED_3;
+					}
+					else
+					{
+						selector = 3;
+ 4f4:	0c 2d       	mov	r16, r12
+ 4f6:	34 c0       	rjmp	.+104    	; 0x560 <main+0xe4>
+					}
+					
+					break;
+			}
+			
+			uint8_t dataPacket[4] = {0};
+ 4f8:	1d 82       	std	Y+5, r1	; 0x05
+ 4fa:	1e 82       	std	Y+6, r1	; 0x06
+ 4fc:	1f 82       	std	Y+7, r1	; 0x07
+ 4fe:	18 86       	std	Y+8, r1	; 0x08
+			uint8_t finalValue[4] = {0};
+ 500:	19 82       	std	Y+1, r1	; 0x01
+ 502:	1a 82       	std	Y+2, r1	; 0x02
+ 504:	1b 82       	std	Y+3, r1	; 0x03
+ 506:	1c 82       	std	Y+4, r1	; 0x04
+			
+			I2C_PCF8591(PCF8591ADR, PCF8591_CONTROL_BYTE, dataPacket); 
+ 508:	ae 01       	movw	r20, r28
+ 50a:	4b 5f       	subi	r20, 0xFB	; 251
+ 50c:	5f 4f       	sbci	r21, 0xFF	; 255
+ 50e:	64 e0       	ldi	r22, 0x04	; 4
+ 510:	80 e9       	ldi	r24, 0x90	; 144
+ 512:	7e df       	rcall	.-260    	; 0x410 <I2C_PCF8591>
+			
+			if(dataPacket[selector]>253)
+ 514:	e5 e0       	ldi	r30, 0x05	; 5
+ 516:	f0 e0       	ldi	r31, 0x00	; 0
+ 518:	ec 0f       	add	r30, r28
+ 51a:	fd 1f       	adc	r31, r29
+ 51c:	e0 0f       	add	r30, r16
+ 51e:	f1 1d       	adc	r31, r1
+ 520:	80 81       	ld	r24, Z
+ 522:	8e 3f       	cpi	r24, 0xFE	; 254
+ 524:	60 f0       	brcs	.+24     	; 0x53e <main+0xc2>
+			{
+				uint8_t digitForError = 1;
+				if(loopAux_0 == 0) digitForError = 1;
+ 526:	11 23       	and	r17, r17
+ 528:	11 f0       	breq	.+4      	; 0x52e <main+0xb2>
+				else digitForError = 16;
+ 52a:	4d 2d       	mov	r20, r13
+ 52c:	03 c0       	rjmp	.+6      	; 0x534 <main+0xb8>
+			I2C_PCF8591(PCF8591ADR, PCF8591_CONTROL_BYTE, dataPacket); 
+			
+			if(dataPacket[selector]>253)
+			{
+				uint8_t digitForError = 1;
+				if(loopAux_0 == 0) digitForError = 1;
+ 52e:	4e 2d       	mov	r20, r14
+ 530:	01 c0       	rjmp	.+2      	; 0x534 <main+0xb8>
+ 532:	4e 2d       	mov	r20, r14
+				else digitForError = 16;
+				displayChar('E', I2C_PCF8574, digitForError);
+ 534:	6c e6       	ldi	r22, 0x6C	; 108
+ 536:	70 e0       	ldi	r23, 0x00	; 0
+ 538:	85 e4       	ldi	r24, 0x45	; 69
+ 53a:	f9 dd       	rcall	.-1038   	; 0x12e <displayChar>
+ 53c:	0b c0       	rjmp	.+22     	; 0x554 <main+0xd8>
+			}
+			
+			else
+			{
+				binaryToVoltageConverter(dataPacket[selector], selector, finalValue);
+ 53e:	ae 01       	movw	r20, r28
+ 540:	4f 5f       	subi	r20, 0xFF	; 255
+ 542:	5f 4f       	sbci	r21, 0xFF	; 255
+ 544:	60 2f       	mov	r22, r16
+ 546:	f5 de       	rcall	.-534    	; 0x332 <binaryToVoltageConverter>
+				
+				display4DigitNumber(finalValue, I2C_PCF8574, loopAux_0);
+ 548:	41 2f       	mov	r20, r17
+ 54a:	6c e6       	ldi	r22, 0x6C	; 108
+ 54c:	70 e0       	ldi	r23, 0x00	; 0
+ 54e:	ce 01       	movw	r24, r28
+ 550:	01 96       	adiw	r24, 0x01	; 1
+ 552:	4b de       	rcall	.-874    	; 0x1ea <display4DigitNumber>
+   while(1)
+    {		
+		uint8_t selector = 0;  // determines an ADC channel to be read. Depends on the state of BUTTON_ONE and BUTTON_TWO and loopAux_0
+		uint8_t loopAux_0;
+		
+		for(loopAux_0 = 0 ; loopAux_0 < 2 ; loopAux_0++) //This sub-main loop does two runs because there are two displays(1) to handle.
+ 554:	1f 5f       	subi	r17, 0xFF	; 255
+ 556:	12 30       	cpi	r17, 0x02	; 2
+ 558:	08 f4       	brcc	.+2      	; 0x55c <main+0xe0>
+ 55a:	b5 cf       	rjmp	.-150    	; 0x4c6 <main+0x4a>
+ 55c:	1f 2d       	mov	r17, r15
+ 55e:	b8 cf       	rjmp	.-144    	; 0x4d0 <main+0x54>
+					}
+					
+					break;
+			}
+			
+			uint8_t dataPacket[4] = {0};
+ 560:	1d 82       	std	Y+5, r1	; 0x05
+ 562:	1e 82       	std	Y+6, r1	; 0x06
+ 564:	1f 82       	std	Y+7, r1	; 0x07
+ 566:	18 86       	std	Y+8, r1	; 0x08
+			uint8_t finalValue[4] = {0};
+ 568:	19 82       	std	Y+1, r1	; 0x01
+ 56a:	1a 82       	std	Y+2, r1	; 0x02
+ 56c:	1b 82       	std	Y+3, r1	; 0x03
+ 56e:	1c 82       	std	Y+4, r1	; 0x04
+			
+			I2C_PCF8591(PCF8591ADR, PCF8591_CONTROL_BYTE, dataPacket); 
+ 570:	ae 01       	movw	r20, r28
+ 572:	4b 5f       	subi	r20, 0xFB	; 251
+ 574:	5f 4f       	sbci	r21, 0xFF	; 255
+ 576:	64 e0       	ldi	r22, 0x04	; 4
+ 578:	80 e9       	ldi	r24, 0x90	; 144
+ 57a:	4a df       	rcall	.-364    	; 0x410 <I2C_PCF8591>
+			
+			if(dataPacket[selector]>253)
+ 57c:	e5 e0       	ldi	r30, 0x05	; 5
+ 57e:	f0 e0       	ldi	r31, 0x00	; 0
+ 580:	ec 0f       	add	r30, r28
+ 582:	fd 1f       	adc	r31, r29
+ 584:	e0 0f       	add	r30, r16
+ 586:	f1 1d       	adc	r31, r1
+ 588:	80 81       	ld	r24, Z
+ 58a:	8e 3f       	cpi	r24, 0xFE	; 254
+ 58c:	70 f6       	brcc	.-100    	; 0x52a <main+0xae>
+ 58e:	d7 cf       	rjmp	.-82     	; 0x53e <main+0xc2>
+					}
+					
+					break;
+			}
+			
+			uint8_t dataPacket[4] = {0};
+ 590:	1d 82       	std	Y+5, r1	; 0x05
+ 592:	1e 82       	std	Y+6, r1	; 0x06
+ 594:	1f 82       	std	Y+7, r1	; 0x07
+ 596:	18 86       	std	Y+8, r1	; 0x08
+			uint8_t finalValue[4] = {0};
+ 598:	19 82       	std	Y+1, r1	; 0x01
+ 59a:	1a 82       	std	Y+2, r1	; 0x02
+ 59c:	1b 82       	std	Y+3, r1	; 0x03
+ 59e:	1c 82       	std	Y+4, r1	; 0x04
+			
+			I2C_PCF8591(PCF8591ADR, PCF8591_CONTROL_BYTE, dataPacket); 
+ 5a0:	ae 01       	movw	r20, r28
+ 5a2:	4b 5f       	subi	r20, 0xFB	; 251
+ 5a4:	5f 4f       	sbci	r21, 0xFF	; 255
+ 5a6:	64 e0       	ldi	r22, 0x04	; 4
+ 5a8:	80 e9       	ldi	r24, 0x90	; 144
+ 5aa:	32 df       	rcall	.-412    	; 0x410 <I2C_PCF8591>
+			
+			if(dataPacket[selector]>253)
+ 5ac:	e5 e0       	ldi	r30, 0x05	; 5
+ 5ae:	f0 e0       	ldi	r31, 0x00	; 0
+ 5b0:	ec 0f       	add	r30, r28
+ 5b2:	fd 1f       	adc	r31, r29
+ 5b4:	e0 0f       	add	r30, r16
+ 5b6:	f1 1d       	adc	r31, r1
+ 5b8:	80 81       	ld	r24, Z
+ 5ba:	8e 3f       	cpi	r24, 0xFE	; 254
+ 5bc:	08 f0       	brcs	.+2      	; 0x5c0 <main+0x144>
+ 5be:	b9 cf       	rjmp	.-142    	; 0x532 <main+0xb6>
+ 5c0:	be cf       	rjmp	.-132    	; 0x53e <main+0xc2>
+
+000005c2 <i2c_init>:
+*************************************************************************/
+void i2c_init(void)
+{
+  /* initialize TWI clock: 100 kHz clock, TWPS = 0 => prescaler = 1 */
+  
+  TWSR = 0;                         /* no prescaler */
+ 5c2:	11 b8       	out	0x01, r1	; 1
+  TWBR = ((F_CPU/SCL_CLOCK)-16)/2;  /* must be > 10 for stable operation */
+ 5c4:	8c e0       	ldi	r24, 0x0C	; 12
+ 5c6:	80 b9       	out	0x00, r24	; 0
+ 5c8:	08 95       	ret
+
+000005ca <i2c_start>:
+unsigned char i2c_start(unsigned char address)
+{
+    uint8_t   twst;
+
+	// send START condition
+	TWCR = (1<<TWINT) | (1<<TWSTA) | (1<<TWEN);
+ 5ca:	94 ea       	ldi	r25, 0xA4	; 164
+ 5cc:	96 bf       	out	0x36, r25	; 54
+
+	// wait until transmission completed
+	while(!(TWCR & (1<<TWINT)));
+ 5ce:	06 b6       	in	r0, 0x36	; 54
+ 5d0:	07 fe       	sbrs	r0, 7
+ 5d2:	fd cf       	rjmp	.-6      	; 0x5ce <i2c_start+0x4>
+
+	// check value of TWI Status Register. Mask prescaler bits.
+	twst = TW_STATUS & 0xF8;
+ 5d4:	91 b1       	in	r25, 0x01	; 1
+ 5d6:	98 7f       	andi	r25, 0xF8	; 248
+	if ( (twst != TW_START) && (twst != TW_REP_START)) return 1;
+ 5d8:	98 30       	cpi	r25, 0x08	; 8
+ 5da:	11 f0       	breq	.+4      	; 0x5e0 <i2c_start+0x16>
+ 5dc:	90 31       	cpi	r25, 0x10	; 16
+ 5de:	79 f4       	brne	.+30     	; 0x5fe <i2c_start+0x34>
+
+	// send device address
+	TWDR = address;
+ 5e0:	83 b9       	out	0x03, r24	; 3
+	TWCR = (1<<TWINT) | (1<<TWEN);
+ 5e2:	84 e8       	ldi	r24, 0x84	; 132
+ 5e4:	86 bf       	out	0x36, r24	; 54
+
+	// wail until transmission completed and ACK/NACK has been received
+	while(!(TWCR & (1<<TWINT)));
+ 5e6:	06 b6       	in	r0, 0x36	; 54
+ 5e8:	07 fe       	sbrs	r0, 7
+ 5ea:	fd cf       	rjmp	.-6      	; 0x5e6 <i2c_start+0x1c>
+
+	// check value of TWI Status Register. Mask prescaler bits.
+	twst = TW_STATUS & 0xF8;
+ 5ec:	91 b1       	in	r25, 0x01	; 1
+ 5ee:	98 7f       	andi	r25, 0xF8	; 248
+	if ( (twst != TW_MT_SLA_ACK) && (twst != TW_MR_SLA_ACK) ) return 1;
+ 5f0:	98 31       	cpi	r25, 0x18	; 24
+ 5f2:	39 f0       	breq	.+14     	; 0x602 <i2c_start+0x38>
+ 5f4:	81 e0       	ldi	r24, 0x01	; 1
+ 5f6:	90 34       	cpi	r25, 0x40	; 64
+ 5f8:	29 f4       	brne	.+10     	; 0x604 <i2c_start+0x3a>
+ 5fa:	80 e0       	ldi	r24, 0x00	; 0
+ 5fc:	08 95       	ret
+	// wait until transmission completed
+	while(!(TWCR & (1<<TWINT)));
+
+	// check value of TWI Status Register. Mask prescaler bits.
+	twst = TW_STATUS & 0xF8;
+	if ( (twst != TW_START) && (twst != TW_REP_START)) return 1;
+ 5fe:	81 e0       	ldi	r24, 0x01	; 1
+ 600:	08 95       	ret
+
+	// check value of TWI Status Register. Mask prescaler bits.
+	twst = TW_STATUS & 0xF8;
+	if ( (twst != TW_MT_SLA_ACK) && (twst != TW_MR_SLA_ACK) ) return 1;
+
+	return 0;
+ 602:	80 e0       	ldi	r24, 0x00	; 0
+
+}/* i2c_start */
+ 604:	08 95       	ret
+
+00000606 <i2c_start_wait>:
+
+
+    while ( 1 )
+    {
+	    // send START condition
+	    TWCR = (1<<TWINT) | (1<<TWSTA) | (1<<TWEN);
+ 606:	24 ea       	ldi	r18, 0xA4	; 164
+    	twst = TW_STATUS & 0xF8;
+    	if ( (twst != TW_START) && (twst != TW_REP_START)) continue;
+    
+    	// send device address
+    	TWDR = address;
+    	TWCR = (1<<TWINT) | (1<<TWEN);
+ 608:	34 e8       	ldi	r19, 0x84	; 132
+    	// check value of TWI Status Register. Mask prescaler bits.
+    	twst = TW_STATUS & 0xF8;
+    	if ( (twst == TW_MT_SLA_NACK )||(twst ==TW_MR_DATA_NACK) ) 
+    	{    	    
+    	    /* device busy, send stop condition to terminate write operation */
+	        TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWSTO);
+ 60a:	44 e9       	ldi	r20, 0x94	; 148
+
+
+    while ( 1 )
+    {
+	    // send START condition
+	    TWCR = (1<<TWINT) | (1<<TWSTA) | (1<<TWEN);
+ 60c:	26 bf       	out	0x36, r18	; 54
+    
+    	// wait until transmission completed
+    	while(!(TWCR & (1<<TWINT)));
+ 60e:	06 b6       	in	r0, 0x36	; 54
+ 610:	07 fe       	sbrs	r0, 7
+ 612:	fd cf       	rjmp	.-6      	; 0x60e <i2c_start_wait+0x8>
+    
+    	// check value of TWI Status Register. Mask prescaler bits.
+    	twst = TW_STATUS & 0xF8;
+ 614:	91 b1       	in	r25, 0x01	; 1
+ 616:	98 7f       	andi	r25, 0xF8	; 248
+    	if ( (twst != TW_START) && (twst != TW_REP_START)) continue;
+ 618:	98 30       	cpi	r25, 0x08	; 8
+ 61a:	11 f0       	breq	.+4      	; 0x620 <i2c_start_wait+0x1a>
+ 61c:	90 31       	cpi	r25, 0x10	; 16
+ 61e:	b1 f7       	brne	.-20     	; 0x60c <i2c_start_wait+0x6>
+    
+    	// send device address
+    	TWDR = address;
+ 620:	83 b9       	out	0x03, r24	; 3
+    	TWCR = (1<<TWINT) | (1<<TWEN);
+ 622:	36 bf       	out	0x36, r19	; 54
+    
+    	// wail until transmission completed
+    	while(!(TWCR & (1<<TWINT)));
+ 624:	06 b6       	in	r0, 0x36	; 54
+ 626:	07 fe       	sbrs	r0, 7
+ 628:	fd cf       	rjmp	.-6      	; 0x624 <i2c_start_wait+0x1e>
+    
+    	// check value of TWI Status Register. Mask prescaler bits.
+    	twst = TW_STATUS & 0xF8;
+ 62a:	91 b1       	in	r25, 0x01	; 1
+ 62c:	98 7f       	andi	r25, 0xF8	; 248
+    	if ( (twst == TW_MT_SLA_NACK )||(twst ==TW_MR_DATA_NACK) ) 
+ 62e:	90 32       	cpi	r25, 0x20	; 32
+ 630:	11 f0       	breq	.+4      	; 0x636 <i2c_start_wait+0x30>
+ 632:	98 35       	cpi	r25, 0x58	; 88
+ 634:	29 f4       	brne	.+10     	; 0x640 <i2c_start_wait+0x3a>
+    	{    	    
+    	    /* device busy, send stop condition to terminate write operation */
+	        TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWSTO);
+ 636:	46 bf       	out	0x36, r20	; 54
+	        
+	        // wait until stop condition is executed and bus released
+	        while(TWCR & (1<<TWSTO));
+ 638:	06 b6       	in	r0, 0x36	; 54
+ 63a:	04 fc       	sbrc	r0, 4
+ 63c:	fd cf       	rjmp	.-6      	; 0x638 <i2c_start_wait+0x32>
+ 63e:	e6 cf       	rjmp	.-52     	; 0x60c <i2c_start_wait+0x6>
+ 640:	08 95       	ret
+
+00000642 <i2c_rep_start>:
+ Return:  0 device accessible
+          1 failed to access device
+*************************************************************************/
+unsigned char i2c_rep_start(unsigned char address)
+{
+    return i2c_start( address );
+ 642:	c3 df       	rcall	.-122    	; 0x5ca <i2c_start>
+
+}/* i2c_rep_start */
+ 644:	08 95       	ret
+
+00000646 <i2c_stop>:
+ Terminates the data transfer and releases the I2C bus
+*************************************************************************/
+void i2c_stop(void)
+{
+    /* send stop condition */
+	TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWSTO);
+ 646:	84 e9       	ldi	r24, 0x94	; 148
+ 648:	86 bf       	out	0x36, r24	; 54
+	
+	// wait until stop condition is executed and bus released
+	while(TWCR & (1<<TWSTO));
+ 64a:	06 b6       	in	r0, 0x36	; 54
+ 64c:	04 fc       	sbrc	r0, 4
+ 64e:	fd cf       	rjmp	.-6      	; 0x64a <i2c_stop+0x4>
+
+}/* i2c_stop */
+ 650:	08 95       	ret
+
+00000652 <i2c_write>:
+unsigned char i2c_write( unsigned char data )
+{	
+    uint8_t   twst;
+    
+	// send data to the previously addressed device
+	TWDR = data;
+ 652:	83 b9       	out	0x03, r24	; 3
+	TWCR = (1<<TWINT) | (1<<TWEN);
+ 654:	84 e8       	ldi	r24, 0x84	; 132
+ 656:	86 bf       	out	0x36, r24	; 54
+
+	// wait until transmission completed
+	while(!(TWCR & (1<<TWINT)));
+ 658:	06 b6       	in	r0, 0x36	; 54
+ 65a:	07 fe       	sbrs	r0, 7
+ 65c:	fd cf       	rjmp	.-6      	; 0x658 <i2c_write+0x6>
+
+	// check value of TWI Status Register. Mask prescaler bits
+	twst = TW_STATUS & 0xF8;
+ 65e:	91 b1       	in	r25, 0x01	; 1
+ 660:	98 7f       	andi	r25, 0xF8	; 248
+	if( twst != TW_MT_DATA_ACK) return 1;
+ 662:	81 e0       	ldi	r24, 0x01	; 1
+ 664:	98 32       	cpi	r25, 0x28	; 40
+ 666:	09 f4       	brne	.+2      	; 0x66a <i2c_write+0x18>
+ 668:	80 e0       	ldi	r24, 0x00	; 0
+	return 0;
+
+}/* i2c_write */
+ 66a:	08 95       	ret
+
+0000066c <i2c_readAck>:
+ 
+ Return:  byte read from I2C device
+*************************************************************************/
+unsigned char i2c_readAck(void)
+{
+	TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWEA);
+ 66c:	84 ec       	ldi	r24, 0xC4	; 196
+ 66e:	86 bf       	out	0x36, r24	; 54
+	while(!(TWCR & (1<<TWINT)));    
+ 670:	06 b6       	in	r0, 0x36	; 54
+ 672:	07 fe       	sbrs	r0, 7
+ 674:	fd cf       	rjmp	.-6      	; 0x670 <i2c_readAck+0x4>
+
+    return TWDR;
+ 676:	83 b1       	in	r24, 0x03	; 3
+
+}/* i2c_readAck */
+ 678:	08 95       	ret
+
+0000067a <i2c_readNak>:
+ 
+ Return:  byte read from I2C device
+*************************************************************************/
+unsigned char i2c_readNak(void)
+{
+	TWCR = (1<<TWINT) | (1<<TWEN);
+ 67a:	84 e8       	ldi	r24, 0x84	; 132
+ 67c:	86 bf       	out	0x36, r24	; 54
+	while(!(TWCR & (1<<TWINT)));
+ 67e:	06 b6       	in	r0, 0x36	; 54
+ 680:	07 fe       	sbrs	r0, 7
+ 682:	fd cf       	rjmp	.-6      	; 0x67e <i2c_readNak+0x4>
+	
+    return TWDR;
+ 684:	83 b1       	in	r24, 0x03	; 3
+
+}/* i2c_readNak */
+ 686:	08 95       	ret
+
+00000688 <__udivmodsi4>:
+ 688:	a1 e2       	ldi	r26, 0x21	; 33
+ 68a:	1a 2e       	mov	r1, r26
+ 68c:	aa 1b       	sub	r26, r26
+ 68e:	bb 1b       	sub	r27, r27
+ 690:	fd 01       	movw	r30, r26
+ 692:	0d c0       	rjmp	.+26     	; 0x6ae <__udivmodsi4_ep>
+
+00000694 <__udivmodsi4_loop>:
+ 694:	aa 1f       	adc	r26, r26
+ 696:	bb 1f       	adc	r27, r27
+ 698:	ee 1f       	adc	r30, r30
+ 69a:	ff 1f       	adc	r31, r31
+ 69c:	a2 17       	cp	r26, r18
+ 69e:	b3 07       	cpc	r27, r19
+ 6a0:	e4 07       	cpc	r30, r20
+ 6a2:	f5 07       	cpc	r31, r21
+ 6a4:	20 f0       	brcs	.+8      	; 0x6ae <__udivmodsi4_ep>
+ 6a6:	a2 1b       	sub	r26, r18
+ 6a8:	b3 0b       	sbc	r27, r19
+ 6aa:	e4 0b       	sbc	r30, r20
+ 6ac:	f5 0b       	sbc	r31, r21
+
+000006ae <__udivmodsi4_ep>:
+ 6ae:	66 1f       	adc	r22, r22
+ 6b0:	77 1f       	adc	r23, r23
+ 6b2:	88 1f       	adc	r24, r24
+ 6b4:	99 1f       	adc	r25, r25
+ 6b6:	1a 94       	dec	r1
+ 6b8:	69 f7       	brne	.-38     	; 0x694 <__udivmodsi4_loop>
+ 6ba:	60 95       	com	r22
+ 6bc:	70 95       	com	r23
+ 6be:	80 95       	com	r24
+ 6c0:	90 95       	com	r25
+ 6c2:	9b 01       	movw	r18, r22
+ 6c4:	ac 01       	movw	r20, r24
+ 6c6:	bd 01       	movw	r22, r26
+ 6c8:	cf 01       	movw	r24, r30
+ 6ca:	08 95       	ret
+
+000006cc <__muluhisi3>:
+ 6cc:	09 d0       	rcall	.+18     	; 0x6e0 <__umulhisi3>
+ 6ce:	a5 9f       	mul	r26, r21
+ 6d0:	90 0d       	add	r25, r0
+ 6d2:	b4 9f       	mul	r27, r20
+ 6d4:	90 0d       	add	r25, r0
+ 6d6:	a4 9f       	mul	r26, r20
+ 6d8:	80 0d       	add	r24, r0
+ 6da:	91 1d       	adc	r25, r1
+ 6dc:	11 24       	eor	r1, r1
+ 6de:	08 95       	ret
+
+000006e0 <__umulhisi3>:
+ 6e0:	a2 9f       	mul	r26, r18
+ 6e2:	b0 01       	movw	r22, r0
+ 6e4:	b3 9f       	mul	r27, r19
+ 6e6:	c0 01       	movw	r24, r0
+ 6e8:	a3 9f       	mul	r26, r19
+ 6ea:	01 d0       	rcall	.+2      	; 0x6ee <__umulhisi3+0xe>
+ 6ec:	b2 9f       	mul	r27, r18
+ 6ee:	70 0d       	add	r23, r0
+ 6f0:	81 1d       	adc	r24, r1
+ 6f2:	11 24       	eor	r1, r1
+ 6f4:	91 1d       	adc	r25, r1
+ 6f6:	08 95       	ret
+
+000006f8 <_exit>:
+ 6f8:	f8 94       	cli
+
+000006fa <__stop_program>:
+ 6fa:	ff cf       	rjmp	.-2      	; 0x6fa <__stop_program>

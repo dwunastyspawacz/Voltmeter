@@ -36,7 +36,8 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../TestowanieNaPlytce.c
+../TestowanieNaPlytce.c \
+../twimaster.c
 
 
 PREPROCESSING_SRCS += 
@@ -46,16 +47,20 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-TestowanieNaPlytce.o
+TestowanieNaPlytce.o \
+twimaster.o
 
 OBJS_AS_ARGS +=  \
-TestowanieNaPlytce.o
+TestowanieNaPlytce.o \
+twimaster.o
 
 C_DEPS +=  \
-TestowanieNaPlytce.d
+TestowanieNaPlytce.d \
+twimaster.d
 
 C_DEPS_AS_ARGS +=  \
-TestowanieNaPlytce.d
+TestowanieNaPlytce.d \
+twimaster.d
 
 OUTPUT_FILE_PATH +=TestowanieNaPlytce.elf
 
@@ -68,6 +73,8 @@ OUTPUT_FILE_DEP:= ./makedep.mk
 LIB_DEP+= 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

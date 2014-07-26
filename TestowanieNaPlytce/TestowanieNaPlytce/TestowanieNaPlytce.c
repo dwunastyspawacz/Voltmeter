@@ -8,96 +8,108 @@
 
 #include <avr/io.h>
 #include <display.h>
-#include <I2C.h>
-#include <util/twi.h>
+#include <I2Cmoja.h>
 #include <stdlib.h>
 #include <util/delay.h>
 #include <stdio.h>
 
-#define F_CPU 8000000
+#define BUTTON_ONE 0b00000001 // Monostable buttons
+#define BUTTON_TWO 0b10000000
+#define BUTTON_THREE 0b01000000 
+							    
+#define LED_0 0b00010000 //PD4 LED's for indicating which reading is being shown on the display
+#define LED_1 0b00100000 //PD5
+#define LED_2 0b01000000 //PB6  
+#define LED_3 0b10000000 //PB7
 
- //<the same as above>
-
-#define BUTTON_ONE 0b10000000 // Monostable buttons
-#define BUTTON_TWO 0b01000000 
-#define BUTTON_THREE 0b00000001 // Monostable button, pushable preferably.
-
+#define LED_ON 0b00001000 //PD3
+#define LED_USART 0b00000100 //PD2
 										 
 int main(void)
 {
-	uint8_t bitMaskArray[4] = {0b00000000, 0b00000001, 0b00000010, 0b00000011}; // bit masks being added to PCF8591_CONTROL_BYTE to switch between channels to be read appropriately 
-																				// first element of the array would select the first channel and so on.
+	DDRB = 0b11111110;
+	PORTB = 0b00000001;
 	
-	const uint8_t PCF8591_CONTROL_BYTE = 0b00000000;		/* Initial control byte configuration. Starting from LSB:
+	DDRC = 0xff;
+	
+	DDRD = 0b00111111;
+	PORTD = 0b11000000;
+	
+	PORTD |= LED_ON;
+	
+	const uint8_t PCF8591_CONTROL_BYTE = 0b00000100;		/* Initial control byte configuration. Starting from LSB:
 																- 0,1 = combination of both determines the choose of the input to be read. 
-																- 2   = auto-increment flag. In this application always zeroed
+																- 2   = auto-increment flag.
 																- 3   = according to the datasheet, always zeroed
 																- 4,5 = combination of those determines: single-ended or differential inputs.
 																		In this app - always zeroed.
 																- 6   = enables the analog output of the converter which isn't used here. Always zeroed.
 																- 7   = according to the datasheet, always zeroed
-														    */			
-														
-	
-	 
-	int8_t calibrationData[4] = {0};
-	 
-	
-	DDRD = 0xff;
-	DDRC = 0xff;
-	DDRB = 0xff;
-	
-	uint8_t i = 201;
+														    */		
 
-	
    while(1)
-    {					
-		/*uint8_t loopAux_0;
-		for(loopAux_0 = 0 ; loopAux_0 < 2 ; loopAux_0++)
-		{
-			uint8_t selector = 0;
-			
+    {		
+		uint8_t selector = 0;  // determines an ADC channel to be read. Depends on the state of BUTTON_ONE and BUTTON_TWO and loopAux_0
+		uint8_t loopAux_0;
+		
+		for(loopAux_0 = 0 ; loopAux_0 < 2 ; loopAux_0++) //This sub-main loop does two runs because there are two displays(1) to handle.
+		{											     // (1)---> The 'display' term is understood as a set of four 7-segment digits put into one package.
 			switch(loopAux_0)
 			{
 				case 0:
 					if(PINB & BUTTON_ONE)
-						selector = 0;
+					{	
+						selector = 0; 
+						PORTD |= LED_0;
+						PORTD &= ~LED_1;
+					}
+						
 					else
-						selector = 1;
+					{
+						selector = 1; 
+						PORTD |= LED_1;
+						PORTD &= ~LED_0;
+					}
+					
 					break;
 				
 				case 1:
-					if(PINB & BUTTON_TWO)
+					if(PIND & BUTTON_TWO)
+					{
 						selector = 2;
+						PORTB |= LED_2;
+						PORTB &= ~LED_3;
+					}
 					else
+					{
 						selector = 3;
+						PORTB |= LED_3;
+						PORTB &= ~LED_2;
+					}
+					
 					break;
-			}*/
+			}
+			
+			uint8_t dataPacket[4] = {0};
 			uint8_t finalValue[4] = {0};
-			uint8_t dataPacket = 0;
 			
+			I2C_PCF8591(PCF8591ADR, PCF8591_CONTROL_BYTE, dataPacket); 
 			
-				
-			while(!(PINB & BUTTON_THREE)) //Enabling the calibration mode;
-			{	
-				PORTD |= LED_1;
-				
-				calibrationData[selector] = calibrationFunction();
-				
-			}
-			
-			uint8_t error = I2C_PCF8591(PCF8591ADR, PCF8591_CONTROL_BYTE | bitMaskArray[0], &dataPacket); 
-			binaryToVoltageConverter(dataPacket, calibrationData, 0x00, finalValue);
-			uint8_t loopAux_1, dispIndex;
-			for(loopAux_1 = 0, dispIndex = 1 ; loopAux_1 < 4 ; loopAux_1++, dispIndex = dispIndex*2) //lepiej przesuniêcie bitowe
+			if(dataPacket[selector]>253)
 			{
-					displayFunction(finalValue[loopAux_1], I2C_PCF8574, dispIndex);
-					_delay_ms(5);
+				uint8_t digitForError = 1;
+				if(loopAux_0 == 0) digitForError = 1;
+				else digitForError = 16;
+				displayChar('E', I2C_PCF8574, digitForError);
 			}
 			
-			//PORTB = 0xff;
-			//PORTC = 0xff;
+			else
+			{
+				binaryToVoltageConverter(dataPacket[selector], selector, finalValue);
+				
+				display4DigitNumber(finalValue, I2C_PCF8574, loopAux_0);
+			}
 			
 		}
-   
+    }
 }
